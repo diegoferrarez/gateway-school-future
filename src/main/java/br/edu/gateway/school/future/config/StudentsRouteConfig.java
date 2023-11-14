@@ -14,10 +14,19 @@ public class StudentsRouteConfig {
         return builder.routes()
                 .route("searchAllStudent", route -> route
                         .path(ConvertableName.SEARCH_ALL_STUDENTS)
-                        .uri("http://localhost:8080/"))
+                        .uri(ConvertableName.URI_KEY))
+                .route("searchByRegistrationNumber", route -> route
+                        .path(ConvertableName.SEARCH_BY_REGISTRATION_NUMBER)
+                        .uri(ConvertableName.URI_KEY))
+                .route("createdRegisterStudent", route -> route
+                        .path(ConvertableName.CREATE_REGISTRATION_STUDENT)
+                        .uri(ConvertableName.URI_KEY))
                 .route("changeInfoStudent", route -> route
                         .path(ConvertableName.CHANGE_FORM_STUDENT)
-                        .uri("http://localhost:8080/"))
+                        .uri(ConvertableName.URI_KEY))
+                .route("changeStatusStudents", route -> route
+                        .path(ConvertableName.CHANGE_STATUS_STUDENTS)
+                        .uri(ConvertableName.URI_KEY))
                 .build();
     }
 }
